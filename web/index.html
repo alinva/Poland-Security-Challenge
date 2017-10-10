@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="summerproject" ng-controller="BaseCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>SAP Security Booth</title>
+    <link rel="stylesheet" type="text/css" href="/bower_components/angular-toastr/dist/angular-toastr.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="icon" href="img/Elements/Simplefly-Simple-Green-Car-electricity.ico" type="image/x-icon"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+</head>
+<body class="mainDiv"  ng-style="RouteData.get('bodyStyle')" >
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-local-storage.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script type="text/javascript" src="js/primitives.min.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="js/tagcanvas.min.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
+<script type="text/javascript" src="js/services.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/tween.js"></script>
+<script type="text/javascript" src="js/providers.js"></script>
+
+
+<div class="header">
+    <!-- Timer -->
+    <div class="timer" ng-cloak>
+        <div class="col-sm-5 col-sm-offset-3 digits" ng-show="$root.currentUser && ($root.currentUser.game.level >= 1 || $root.currentUser.game.level <= 3)" >
+        </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="navigationBar" id="bs-example-navbar-collapse-1" >
+        <div ng-show="$root.currentUser" class="nameLabel" ng-cloak>Hello, {{$root.currentUser.firstName}}, Level:{{$root.currentUser.game.level}}</div>
+
+        <ul>
+            <li><a href="#/login" ng-hide="$root.currentUser" style="display:none">Sign In</a></li>
+            <li><a href="#/signup" ng-hide="$root.currentUser" style="display:none">Register</a></li>
+            <li><a href="" ng-click="showLogoutModal()" ng-show="$root.currentUser" ng-cloak>Sign Out</a></li>
+            <li><a href="#/help" ng-show="$root.currentUser" ng-cloak>Help</a></li>
+            <li><a href="#/about" ng-show="$root.currentUser" ng-cloak>About</a></li>
+            <li><a href="" ng-show="$root.currentUser && showMyhints && ($root.currentUser.game.level >= 1 && $root.currentUser.game.level <= 3) " ng-click="myHints()" >My hints</a></li>
+        </ul>
+    </div>
+    <div class="flagFrame" ng-show="showFlagsModal" ng-cloak>
+        <div class="label" style="font-size: x-large;"><u>Achieved Flags</u></div>
+        <br>
+        <div style="position:relative" ng-repeat="f in flags">{{f}}</div>
+    </div>
+    <div class="hintFrame " id="hints" ng-show="showHints && showMyhints && ($root.currentUser.game.level >= 1 && $root.currentUser.game.level <= 3) " ng-cloak>
+        <form ng-submit="getHint()   " style="overflow-z: hidden; margin-left: 0">
+            <ul style=" " id="hintList" class="hintsGeneral" >
+                <li  ng-repeat="hint in $root.currentUser.game.hints" ng-cloak> {{hint}}</li>
+            </ul>
+            <input type="submit" id="hintButton" value="Give me a Hint" class="button2"
+                   title="Get Hint" ng-disabled="isHintDisabled"  /><br><br><br>
+        </form>
+
+    </div>
+
+    <div class="logoutFrame" ng-show="showLogoutM" ng-cloak>
+        <span>
+            <button class="stayButton" ng-click="showLogoutModal()">
+                    Stay
+            </button >
+
+            <button class="exitButton" ng-click="logout()">
+                Exit
+            </button>
+        </span>
+    </div>
+</div>
+</body>
+
+
+<br/>
+<br/>
+<div ng-view class="animate-view">
+
+</div>
+
+</body>
+
+ <!--&lt;!&ndash;Google Analytics&ndash;&gt;-->
+<!--<script>-->
+    <!--(function (i, s, o, g, r, a, m) {-->
+        <!--i['GoogleAnalyticsObject'] = r;-->
+        <!--i[r] = i[r] || function () {-->
+                    <!--(i[r].q = i[r].q || []).push(arguments)-->
+                <!--}, i[r].l = 1 * new Date();-->
+        <!--a = s.createElement(o),-->
+                <!--m = s.getElementsByTagName(o)[0];-->
+        <!--a.async = 1;-->
+        <!--a.src = g;-->
+        <!--m.parentNode.insertBefore(a, m)-->
+    <!--})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');-->
+
+    <!--ga('create', 'UA-72175431-1', 'auto');-->
+    <!--ga('send', 'pageview', '/index.html');-->
+
+<!--</script>-->
+<!-- End Google Analytics -->
+</html>

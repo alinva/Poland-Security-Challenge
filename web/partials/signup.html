@@ -1,0 +1,72 @@
+<div id="RK" style="width: 320px; height: 400px;">
+    <img src="../img/RK1.JPG" height="400" />
+</div>
+<div class="level">
+    <div class="containerSignup">
+        <div class="intro alignCenter" ng-click="goToSignup()" ng-show="intro"> <br> <h1>Welcome to the "Hack & Furious" Challenge! </h1><br>
+            <div class="closeIntro">
+                <span class="tooltip">Go to Signup</span>
+            </div>
+            Robert Kubica was kidnapped by a group of hackers.
+            They have set up 3 security challenges on the way that leads to Robert Kubica. <br>
+            But if the challenges will not be solved in 25 minutes -  Robert will stay in danger and will not arrive to the "World Rally Championship"!! <br>
+            Your goal is to save  Robert Kubica by completing<br>
+            the following 3 challenges: <br>
+            1. Hack your way to start your car's engine. <br>
+            2. Change the traffic light in your way.  <br>
+            3. Get through the parking lot's security check. <br><br>
+            <br>
+
+            Good luck! <br><br>
+
+            For more information about the challenge, go to <b>Help</b> after you complete your signup.
+        </div>
+    <div class="backSheet" ng-show="!intro">
+        <form >
+            <div class="label1Big alignCenter">Register</div>
+            <br>
+
+            <div class="row">
+                <div class="wrapper">
+                    <label for="exampleInputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="exampleInputFirstName" placeholder="first name"
+                           ng-model="firstName"></input>
+                </div>
+                <div class="wrapper">
+                    <label for="exampleInputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="exampleInputLastName" placeholder="last name"
+                           ng-model="lastName"></input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="wrapper">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="email"
+                           ng-model="email"></input>
+                </div>
+
+                <div class=" wrapper">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                           ng-model="password"></input>
+                </div>
+            </div>
+            <div class=" wrapper">
+                <div class="alignCenter">
+                    <div class=" wrapper">
+                    <p>*Please write down your password and mail</p>
+                    </div>
+                    <button type="submit" class="button1" ng-click="signup()">Submit</button>
+                    <a class="link" style="" href="#/login" >Already a Member?</a>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+</div>
+
+<div style="width: 320px; height: 400px;">
+    <img src="../img/RK1.JPG" height="400" />
+</div>

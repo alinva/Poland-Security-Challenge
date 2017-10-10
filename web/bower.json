@@ -1,0 +1,17 @@
+{
+  "name": "sap-security-booth-dkom-16",
+  "version": "1.0.0",
+  "homepage": "https://github.wdf.sap.corp/i305845/SecurityBooth",
+  "authors": [
+    "Keinan Gilad <i305845@sap.com>"
+  ],
+  "description": "Security booth application",
+  "license": "SAP",
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-animate": "~1.4.3",
+    "angular-resource": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-toastr": "~1.4.1"
+  }
+}

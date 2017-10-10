@@ -1,0 +1,63 @@
+
+<div class="level level1">
+    <div ng-show="$root.showVideo">
+        <video id = "video1" autoplay="false">
+            <source src="../img/movie/level1.mp4" type="video/mp4" >
+        </video>
+    </div>
+
+    <div class ="guideline"  ng-hide="$root.showVideo">
+            <div class="guidelineText">  Your mission is to start the car by hacking the ignition code.
+            </div>
+        </div>
+        <div class="codan_container"  ng-hide="$root.showVideo">
+            <div class="codan" id="codan">
+                <table id="table1" class="table1">
+                    <tr>
+                        <td id = "c1"class="cell"></td>
+                        <td id = "c2"class="cell"></td>
+                        <td id = "c3"class="cell"></td>
+                    </tr>
+                    <tr>
+                        <td id = "c4"class="cell" ></td>
+                        <td id = "c5"class="cell" ></td>
+                        <td id = "c6"class="cell">
+                            <form id="submitPin" ng-submit="submitPin()">
+                                <input type="hidden" type="submit" name="pin" id="pinInput"/>
+                            </form>
+
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="codan_input">
+                <table id="table2">
+                    <tr class="trTbl1">
+                        <td id = "i1"class="input" ></td>
+                        <td id = "i2"class="input" ></td>
+                        <td id = "i3"class="input" ></td>
+                        <td id = "i4"class="input"></td>
+                    </tr>
+                    <table id="table3">
+                    <tr id="msgRow" class="trTbl2">
+                        <td class="text">
+                            <div id="Yes" ng-show="success">
+                                <div class="inputCodanSuccessLabel slowShow inputlabel"> Congratulations! </div></div>
+                            <div id="No" ng-show="fail">
+                                <div class ="inputCodanErrorLabel slowShow inputlabel"> Please try again! </div></div>
+                        </td>
+                    </tr>
+                    </table>
+                    </tr>
+                </table>
+            </div>
+            <div class="help-tip">
+                <p> Need help ? <br> Please go to <b>My hints</b> in the  navigation bar.</p>
+            </div>
+        </div>
+</div>
+</body>
+
+</html>

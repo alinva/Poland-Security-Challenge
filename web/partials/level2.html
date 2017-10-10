@@ -1,0 +1,42 @@
+
+
+<div class="level level2" >
+
+    <div ng-show="$root.showVideo">
+        <video id = "video2" autoplay="false">
+            <source src="../img/movie/level2.mp4" type="video/mp4" >
+        </video>
+    </div>
+
+    <div class="guideline" ng-hide="$root.showVideo">
+        <div class="guidelineText">
+            You have arrived at the traffic light’s control center where you can see <br> the traffic light’s status and communicate with the administrator. <br>
+            Your mission is to change the traffic light to green.
+        </div>
+    </div>
+    <div class="errorAuth" ng-hide="$root.showVideo">
+        <label id="errorLabel" class="errorLabel"></label>
+    </div>
+
+    <div class = "mainChatDiv" ng-hide="$root.showVideo">
+        <button class="greenLightButton" id="adminButton" onclick="turnGreenLightOn()"></button>
+        <div class = "mainChatArea">
+                  <img class="imageTrafficLight" id="trafficLight" src="../img/Elements/red.png">
+                <div class="chatwindow">
+                        <div ng-repeat="e in allMassages">
+                            <div class = "bubbleContent">
+                                <img class=bubbleImg src="../img/Elements/bigBubble.png">
+                                <div class="bubble">{{e.author + ': ' +e.massage}}</div>
+                            </div>
+                        </div>
+                    <div class="container2" >
+                        <input type="text" id="chatInput" class="chatBoxInput">
+                        <button class="chatButton" id= "chatButton" ng-click="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        <div class="help-tip" ng-hide="$root.showVideo">
+            <p> Need help ? <br> Please go to <b>My hints</b> in the  navigation bar.</p>
+        </div>
+    </div>
+</div>

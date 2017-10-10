@@ -1,0 +1,38 @@
+{
+  "name": "sap-security-booth-dkom-16",
+  "version": "1.0.0",
+  "description": "A security fun challange for the SAP DKOM at Israel, 2017.",
+  "keywords": [
+    "security",
+    "sap",
+    "heroku"
+  ],
+  "author": "keinang",
+  "engines": {
+    "node": "7.10.0"
+  },
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "body-parser": "~1.0.0",
+    "canonical-path": "0.0.2",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "~1.0.0",
+    "cryptr": "^2.0.0",
+    "ejs": "~0.8.5",
+    "express": "~4.0.0",
+    "express-session": "~1.0.0",
+    "gmail-send": "^1.2.10",
+    "http": "0.0.0",
+    "method-override": "~1.0.0",
+    "mongoose": "~3.8.1",
+    "morgan": "~1.0.0",
+    "nodemailer": "^4.0.1",
+    "passport": "~0.1.17",
+    "passport-facebook": "~1.0.2",
+    "passport-google-oauth": "~0.1.5",
+    "passport-local": "~0.1.6",
+    "passport-twitter": "~1.0.2",
+    "ws": "^2.2.0"
+  }
+}

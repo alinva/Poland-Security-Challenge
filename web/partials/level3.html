@@ -1,0 +1,38 @@
+<div class="level level3" >
+
+    <div ng-show="$root.showVideo">
+        <video id = "video3" autoplay="false">
+            <source src="../img/movie/level3.mp4" type="video/mp4" >
+        </video>
+    </div>
+
+    <div class ="guideline" ng-hide="$root.showVideo">
+        <div class="guidelineText">
+            This is the SAP parking lot.<br>
+            <!--Your car’s license plate was found to be unauthorized. <br>-->
+            Your mission is to find your way to get into the parking lot. <br>
+            The License Plate Recognition camera had captured your license plate number,<br> Please approve: <br>
+        </div>
+    </div>
+
+        <div class="container3 " id="container3" ng-hide="$root.showVideo">
+            <div class = errorLevel3>
+                <label align="center" id="submitResponseErrorLabel" class="submitResponseErrorLabel"></label>
+                <label align="center" id="submitResponseSuccessLabel" class="submitResponseSuccessLabel"></label>
+            </div>
+            <div class = "mainLevel3">
+                <div class="contentLevel3">
+                    <div>
+                      <input class= "input11" value="65-138-72" name="lp" id="licensePlateInput" disabled /></input>
+                    </div>
+                    <div>
+                      <button id="approveButtonId" class="approveButton" ng-click="submitLicensePlate()"></button>
+                    </div>
+                </div>
+                <div class="help-tip">
+                    <p> Need help ? <br> Please go to <b>My hints</b> in the  navigation bar.</p>
+                </div>
+            </div>
+        </div>
+
+</div>
